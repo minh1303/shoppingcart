@@ -1,0 +1,85 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 5rem;
+}
+
+.navbar ul {
+    position: relative;
+}
+
+.navbar ul a {
+    color: white;
+    display: inline-block;
+    position: relative;
+
+}
+
+
+.navbar ul a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.navbar ul a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar a[class="active"]::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+}
+
+
+
+.logo a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.logo a:hover {
+    color: whitesmoke;
+}
+
+.img {
+    object-fit: fill;
+    height: 24px;
+    width: 24px;
+    margin-right: 5px;
+}
+
+.img:hover {
+    cursor: pointer;;
+}
+
+.cartcounter {
+    position: absolute;
+    top: 0;
+    font-size: smaller;
+}
